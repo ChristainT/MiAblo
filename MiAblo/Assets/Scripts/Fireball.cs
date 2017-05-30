@@ -37,11 +37,11 @@ public class Fireball : MonoBehaviour {
 			
 	}
 
-	void OnCollisionEnter(Collision col){
+	void OnCollisionEnter(Collision collider){
 
-		if (col.transform.tag == "Enemy") {
+		if (collider.transform.tag == "Enemy") {
 			
-			col.transform.GetComponent<IEnemy> ().TakeDamage (Damage);
+			collider.transform.GetComponent<IEnemy> ().TakeDamage (Damage);
 		}
 
 		Extinguish ();

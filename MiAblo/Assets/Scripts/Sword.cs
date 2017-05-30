@@ -28,11 +28,11 @@ public class Sword : MonoBehaviour, IWeapon {
 	}
 
 
-	void OnTriggerEnter(Collider col) {
+	void OnTriggerEnter(Collider collider) {
 
-		if (col.tag == "Enemy") {
+		if (collider.tag == "Enemy") {
 
-			col.GetComponent<IEnemy> ().TakeDamage (Stats[0].GetCalculatedStatValue());
+			collider.GetComponent<IEnemy> ().TakeDamage (Stats[0].GetCalculatedStatValue());
 
 		}
 
