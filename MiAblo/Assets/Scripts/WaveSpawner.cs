@@ -12,7 +12,7 @@ public class WaveSpawner : MonoBehaviour {
 
 		public string name;
 
-		public Transform enemy;
+		public List<Transform> enemies;
 
 		public int count;
 
@@ -121,7 +121,7 @@ public class WaveSpawner : MonoBehaviour {
 
 		for (int i = 0; i < _wave.count; i++) {
 			
-			SpawnEnemy (_wave.enemy);
+			SpawnEnemy (_wave.enemies[Random.Range(0, _wave.enemies.Count)]);
 
 			yield return new WaitForSeconds (1/_wave.rate);
 		}
