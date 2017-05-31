@@ -10,7 +10,7 @@ public class DialogueSystem : MonoBehaviour {
 
 	public GameObject dialoguePanel;
 
-	private NavMeshAgent playerAgent;
+//	private NavMeshAgent playerAgent;
 
 	[HideInInspector]
 	public string npcName;
@@ -30,7 +30,7 @@ public class DialogueSystem : MonoBehaviour {
 
 	void Start () {
 
-		playerAgent = GameObject.FindWithTag ("Player").GetComponent<WorldInteraction> ().PlayerAgent;
+		//playerAgent = GameObject.FindWithTag ("Player").GetComponent<WorldInteraction> ().PlayerAgent;
 
 		continueButton = dialoguePanel.transform.FindChild ("ContinueButton").GetComponent<Button> ();
 

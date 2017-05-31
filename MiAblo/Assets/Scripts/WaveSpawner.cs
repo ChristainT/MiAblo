@@ -26,7 +26,7 @@ public class WaveSpawner : MonoBehaviour {
 
 	public float timeBetweenWaves = 5f;
 
-	private float waveCountdown;
+	public float waveCountdown;
 
 	private float searchCountdown = 1;
 
@@ -133,12 +133,12 @@ public class WaveSpawner : MonoBehaviour {
 		yield break;
 	}
 
-	void SpawnEnemy (Transform _enemy) {
+	void SpawnEnemy (Transform _enemies) {
 
-		Debug.Log ("Spawning Enemy: " + _enemy.name);
+		Debug.Log ("Spawning Enemy: " + _enemies.name);
 
 		Transform _sp = spawnPoints [Random.Range (0, spawnPoints.Length)];
 
-		Instantiate (_enemy, _sp.position, _sp.rotation);
+		Instantiate (_enemies, _sp.position, _sp.rotation);
 	}
 }
